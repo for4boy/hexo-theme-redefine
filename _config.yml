@@ -11,11 +11,11 @@
 # Docs: https://redefine-docs.ohevan.com/basic/info
 info:
   # Site title
-  title: Theme Redefine
+  title: 零股之易-Python量化交易系統
   # Author name
-  author: The Redefine Team
+  author: 易
   # Site URL
-  url: https://redefine.ohevan.com
+  url: https://for4boy.github.io
 # BASIC INFORMATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -23,11 +23,11 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/redefine-favicon.svg
+  favicon: /images/YI.ico
   # Site logo
   logo: 
   # Site avatar
-  avatar: /images/redefine-avatar.svg
+  avatar: /images/Yi.png
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -39,7 +39,7 @@ colors:
   # Secondary color (TBD)
   secondary:
   # Default theme mode initial value (will be overwritten by prefer-color-scheme)
-  default_mode: light # light, dark
+  default_mode: dark # light, dark
 # COLORS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -72,11 +72,11 @@ global:
     percentage: true # percentage
   # Website counter
   website_counter:
-    url: https://cn.vercount.one/js # counter API URL (no need to change)
-    enable: true # enable website counter or not
-    site_pv: true # site page view
-    site_uv: true # site unique visitor
-    post_pv: true # post page view
+    # url: https://cn.vercount.one/js # counter API URL (no need to change)
+    enable: false # enable website counter or not
+    site_pv: false # site page view
+    site_uv: false # site unique visitor
+    post_pv: false # post page view
   # Whether to enable single page experience (using swup). See https://swup.js.org/. similar to pjax
   single_page: true
   # Whether to enable Preloader.
@@ -116,13 +116,13 @@ home_banner:
     light: /images/wallhaven-wqery6-light.webp # light mode
     dark: /images/wallhaven-wqery6-dark.webp # dark mode
   # Home banner title
-  title: Theme Redefine
+  title: 零股之易-Python量化交易系統
   # Home banner subtitle
   subtitle:
-    text: [] # subtitle text, array
+    text: ["台股零股 量化交易 走勢數據回測 股海實戰日誌"] # subtitle text, array
     hitokoto:  # 一言配置
       enable: false # Whether to enable hitokoto
-      api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
+      # api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
     typing_speed: 100 # Typing speed (ms)
     backing_speed: 80 # Backing speed (ms)
     starting_delay: 500 # Start delay (ms)
@@ -189,6 +189,12 @@ navbar:
     Home: 
       path: / 
       icon: fa-regular fa-house # can be empty
+    Tags: 
+      path: /tags 
+      icon: fa-regular fa-tags # can be empty
+    Categories: 
+      path: /categories 
+      icon: fa-regular fa-folder # can be empty
     # Archives: 
     #   path: /archives 
     #   icon: fa-regular fa-archive # can be empty
@@ -212,7 +218,7 @@ navbar:
   # Navbar search (local search). Requires hexo-generator-searchdb (npm i hexo-generator-searchdb). See https://github.com/theme-next/hexo-generator-searchdb
   search:
     # Whether to enable
-    enable: false
+    enable: true
     # Preload search data when the page loads
     preload: true
 # NAVIGATION BAR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
@@ -224,7 +230,7 @@ home:
   # Sidebar settings
   sidebar:
     enable: true # Whether to enable sidebar
-    position: left # Sidebar position. left, right
+    position: right # Sidebar position. left, right
     first_item: menu # First item in sidebar. menu, info
     announcement: # Announcement text
     show_on_mobile: true # Whether to show sidebar navigation on mobile sheet menu
@@ -232,12 +238,12 @@ home:
       # Archives: 
       #   path: /archives 
       #   icon: fa-regular fa-archive # can be empty
-      # Tags: 
-      #   path: /tags 
-      #   icon: fa-regular fa-tags # can be empty
-      # Categories: 
-      #   path: /categories 
-      #   icon: fa-regular fa-folder # can be empty
+      Tags: 
+        path: /tags 
+        icon: fa-regular fa-tags # can be empty
+      Categories: 
+        path: /categories 
+        icon: fa-regular fa-folder # can be empty
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
@@ -259,18 +265,24 @@ articles:
   style:
     font_size: 16px # Font size
     line_height: 1.5 # Line height
-    image_border_radius: 14px # image border radius
+    image_border_radius: 16px # image border radius
     image_alignment: center # image alignment. left, center
     image_caption: false # Whether to display image caption
     link_icon: true # Whether to display link icon
-    title_alignment: left # Title alignment. left, center
+    title_alignment: center # Title alignment. left, center
     headings_top_spacing: # Top spacing for headings from h1-h6
-      h1: 5rem
-      h2: 4rem
-      h3: 2.8rem
-      h4: 2.5rem
-      h5: 2.2rem
-      h6: 2rem
+      h1: 12px
+      h2: 16px
+      h3: 10px
+      h4: 12px
+      h5: 11px
+      h6: 10px
+      # h1: 5rem
+      # h2: 4rem
+      # h3: 2.8rem
+      # h4: 2.5rem
+      # h5: 2.2rem
+      # h6: 2rem
   # Word count. Requires hexo-wordcount (npm install hexo-wordcount). See https://github.com/willin/hexo-wordcount
   word_count:
     enable: true # Whether to enable
@@ -278,7 +290,7 @@ articles:
     min2read: true # Whether to display reading time
   # Author label
   author_label: 
-    enable: true # Whether to enable
+    enable: false # Whether to enable
     auto: false # Whether to automatically add author label, e.g. Lv1, Lv2, Lv3...
     list: []
   # Code block settings
@@ -298,7 +310,7 @@ articles:
     init_open: true # Open toc by default
   # Whether to enable copyright notice
   copyright:
-    enable: true # Whether to enable
+    enable: false # Whether to enable
     default: cc_by_nc_sa # Default license, can be cc_by_nc_sa, cc_by_nd, cc_by_nc, cc_by_sa, cc_by, all_rights_reserved, public_domain
   # Whether to enable lazyload for images
   lazyload: true
@@ -307,7 +319,7 @@ articles:
     # Whether to enable article recommendation
     enable: false
     # Article recommendation title
-    title: 推荐阅读
+    title: 建議閱讀
     # Max number of articles to display
     limit: 3
     # Max number of articles to display mobile
@@ -323,7 +335,7 @@ articles:
 # Docs: https://redefine-docs.ohevan.com/posts/comment
 comment:
   # Whether to enable comment
-  enable: true
+  enable: false
   # Comment system
   system: waline # waline, gitalk, twikoo, giscus
   # System configuration
@@ -331,7 +343,7 @@ comment:
     # Waline comment system. See https://waline.js.org/
     waline:
       serverUrl: https://example.example.com # Waline server URL. e.g. https://example.example.com
-      lang: zh-CN # Waline language. e.g. zh-CN, en-US. See https://waline.js.org/guide/client/i18n.html
+      lang: zh-TW # Waline language. e.g. zh-CN, en-US. See https://waline.js.org/guide/client/i18n.html
       emoji: [] # Waline emojis, see https://waline.js.org/guide/features/emoji.html
       recaptchaV3Key: wasd # Google reCAPTCHA v3 key. See https://waline.js.org/reference/client/props.html#recaptchav3key
       turnstileKey: # Turnstile key. See https://waline.js.org/reference/client/props.html#turnstilekey
@@ -367,11 +379,11 @@ comment:
 # Docs: https://redefine-docs.ohevan.com/footer
 footer:
   # Show website running time
-  runtime: true # show website running time or not
+  runtime: false # show website running time or not
   # Icon in footer, write fontawesome icon code here
-  icon: '<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>'
+  icon: '<i class="fa-regular fa-pen-fancy" style="--fa-animation-duration: 0.5s; color: #f54545"></i>'
   # The start time of the website, format: YYYY/MM/DD HH:mm:ss
-  start: 2022/8/17 11:45:14
+  start: 2024/6/11 12:00:00
   # Site statistics
   statistics: true # show site statistics or not (total articles, total words)
   # Footer message
@@ -405,7 +417,7 @@ inject:
 plugins:
   # RSS feed. Requires hexo-generator-feed (npm i hexo-generator-feed). See https://github.com/hexojs/hexo-generator-feed
   feed:
-    enable: false # Whether to enable
+    enable: true # Whether to enable
   # Aplayer. See https://github.com/DIYgod/APlayer
   aplayer:
     enable: false # Whether to enable
